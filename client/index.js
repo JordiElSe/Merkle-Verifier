@@ -18,8 +18,6 @@ async function main() {
   rl.question('Enter your name: ', async (name) => {
     // Close the readline interface
     rl.close();
-    console.log(typeof name);
-    console.log(name);
     
     // Make an HTTP request to the server with the user's name
     const { data: gift } = await axios.post(`${serverUrl}/gift`, {
